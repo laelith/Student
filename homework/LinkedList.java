@@ -1,7 +1,5 @@
 package homework;
 
-import N
-
 //My Linked List Class
 public class LinkedList<T extends Comparable>{
     private Node<T> head;

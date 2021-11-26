@@ -2,8 +2,8 @@ package homework;
 
 //My Node Class
 public class Node<T extends Comparable> {
-    private T value;
-    private Node<T> next;
+    T value;
+    Node<T> next;
 
     public Node(){
         this.value=null;
