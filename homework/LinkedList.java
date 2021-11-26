@@ -17,14 +17,14 @@ public class LinkedList<T extends Comparable>{
     }
 
     //
-    public void addStudent(T value){
+    public void addNode(T value){
         Node<T> newNode = createNode(value);
         newNode.next=head;
         head=newNode;
     }
 
     //Delete the student whose id is entered by the user.
-    public void deleteStudent(T value){
+    public void deleteNode(T value){
         if(head.value.compareTo(value)==0){
             head=head.next;
             System.out.printf("Student has been deleted.");
