@@ -12,15 +12,32 @@ public class LinkedList<T extends Comparable>{
         this.head = head;
     }
 
-    public Node<T> createNode(T value){
-        return new Node<T>(value);
-    }
-
     //
-    public void addNode(T value){
-        Node<T> newNode = createNode(value);
-        newNode.next=head;
-        head=newNode;
+    public void addNode(T value)
+    {
+        Node<T> newNode = new Node<T>(value);
+        // if head is null assign new node as head
+        if (head == null)
+        {
+        	head = newNode;
+        }
+        else
+        {
+            // continue until next node is null,
+            // when next node is null here is the place that you will insert node
+            // Head->Node2->Node3->null
+            //                       |
+            // -------------------CurrentNode----------------
+            // then
+            // Head->Node2->Node3->CurrentNode
+        	// If you want you can use iterators
+        	Node<T> currentNode = head.next;
+        	while(currentNode.next != null)
+        	{
+        		currentNode = currentNode.next;
+        	}
+        	currentNode.next = newNode;
+        }
     }
 
     //Delete the student whose id is entered by the user.
