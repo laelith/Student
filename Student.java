@@ -1,6 +1,6 @@
 package homework;
 
-public class Student implements Comparable {
+public class Student implements Comparable<Student> {
     private int id;
     private String name;
     private int mathGrade;
@@ -52,12 +52,16 @@ public class Student implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public String toString(){
+        return id +" "+ name ;
+    }
+
+    public int findAverage(){
+        return (mathGrade+dataStructureGrade)/2;
     }
 
     @Override
-    public String toString(){
-        return id +" "+ name ;
+    public int compareTo(Student student) {
+        return findAverage()-student.findAverage();
     }
 }

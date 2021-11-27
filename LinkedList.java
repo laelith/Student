@@ -55,6 +55,10 @@ public class LinkedList <T extends Comparable> {
 
     }
 
+    public void sortingNodes(){
+        
+    }
+
     public int count(){
         int count=0;
         Node<T> iterator=head;
