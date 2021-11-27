@@ -1,6 +1,5 @@
 package homework;
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -26,30 +25,46 @@ public class Main {
             switch(input) {
                 case 1:
                     myLinkedList.display();
+                    break;
                 case 2:
-
-
+                    Helper.sortoverallAverage(myLinkedList);
+                    myLinkedList.display();
+                    break;
                 case 3:
-
-
+                    Helper.sortDSG(myLinkedList);
+                    myLinkedList.display();
+                    break;
                 case 4:
-
-
+                    System.out.println(Helper.mathAverage(myLinkedList));
+                    break;
                 case 5:
-
-
+                    System.out.println("Data structure average is " + Helper.dataStructureAverage(myLinkedList));
+                    System.out.println("The students which has the lowest data structure grade is " );
+                    System.out.println(myLinkedList.findMin());
+                    break;
                 case 6:
-
-
+                    System.out.print("Please enter an id..: ");
+                    Scanner scanner= new Scanner(System.in);
+                    int id=0;
+                    id=sc.nextInt();
+                    myLinkedList.deleteNode(id);
+                    break;
                 case 7:
-
-
+                    System.out.println("Please enter id, name, and two grades (Math and Data structures respectively) in one line, please use one blank between informations.");
+                    Helper.createAStudent(myLinkedList);
+                    break;
                 case 8:
-
-
+                    System.out.println(Student.studentNumber);
+                    break;
                 case 9:
+                    System.out.println("The students which are successfull in math");
+                    System.out.println("Math average is.. : " + Helper.mathAverage(myLinkedList));
+                    Helper.upperMathAverage(myLinkedList).display();
 
-
+                    System.out.println("The students which are successfull in data structure");
+                    System.out.println("Data Structure average is.. : " + Helper.dataStructureAverage(myLinkedList));
+                    Helper.upperDataAverage(myLinkedList).display();
+                    break;
             }
 
         }while(input!=-1);

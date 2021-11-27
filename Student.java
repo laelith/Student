@@ -7,11 +7,6 @@ public class Student implements Comparable<Student> {
     private int dataStructureGrade;
     static int studentNumber;
 
-    public float CalculateOverallAverage(){
-        float overallAverage = (mathGrade+dataStructureGrade)/studentNumber;
-        return overallAverage;
-    }
-
     public int getId() {
         return id;
     }
@@ -49,11 +44,12 @@ public class Student implements Comparable<Student> {
         this.name = name;
         this.mathGrade = mathGrade;
         this.dataStructureGrade = dataStructureGrade;
+        studentNumber=studentNumber+1;
     }
 
     @Override
     public String toString(){
-        return id +" "+ name ;
+        return id +" "+ name + " " + mathGrade + " " + dataStructureGrade ;
     }
 
     public int findAverage(){
@@ -64,4 +60,9 @@ public class Student implements Comparable<Student> {
     public int compareTo(Student student) {
         return findAverage()-student.findAverage();
     }
+
+    public float CalculateOverallAverage(){
+        return (mathGrade+dataStructureGrade)/studentNumber;
+    }
+
 }

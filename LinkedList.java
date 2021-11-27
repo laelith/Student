@@ -55,10 +55,6 @@ public class LinkedList <T extends Comparable> {
 
     }
 
-    public void sortingNodes(){
-        
-    }
-
     public int count(){
         int count=0;
         Node<T> iterator=head;
@@ -75,5 +71,32 @@ public class LinkedList <T extends Comparable> {
             System.out.println(iterator.value);
             iterator=iterator.next;
         }
+    }
+
+    public void lastNode(){
+        Node<T> iterator = head;
+        while (iterator.next!=null){
+            iterator=iterator.next;
+        }
+        System.out.println(iterator.toString());
+    }
+
+    public T findMin(){
+        T min=head.value;
+        Node<T> iterator=head;
+        while(iterator!=null){
+            if(min.compareTo(iterator.value)==1){
+                min=iterator.value;
+            }
+            iterator=iterator.next;
+        }
+        return min;
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedList{" +
+                "head=" + head +
+                '}';
     }
 }
