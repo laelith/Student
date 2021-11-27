@@ -1,8 +1,5 @@
 package homework;
 
-import java.io.File;
-import java.util.Scanner;
-
 public class Student implements Comparable {
     private int id;
     private String name;
@@ -10,12 +7,10 @@ public class Student implements Comparable {
     private int dataStructureGrade;
     static int studentNumber;
 
-//
-//    public float CalculateOverallAverage(){
-//        float overallAverage = (mathGrade+dataStructureGrade)/studentNumber;
-//        return overallAverage;
-//    }
-
+    public float CalculateOverallAverage(){
+        float overallAverage = (mathGrade+dataStructureGrade)/studentNumber;
+        return overallAverage;
+    }
 
     public int getId() {
         return id;
@@ -61,4 +56,8 @@ public class Student implements Comparable {
         return 0;
     }
 
+    @Override
+    public String toString(){
+        return id +" "+ name ;
+    }
 }

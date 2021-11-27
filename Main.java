@@ -1,6 +1,8 @@
 package homework;
 
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         LinkedList myLinkedList = Helper.createStudent();
@@ -16,6 +18,42 @@ public class Main {
                 "9- Students pass the class if their grade is above the average for each course.\n" +
                 "10 - Find and display the successful students for each course.");
 
-        myLinkedList.display();
+        Scanner sc= new Scanner(System.in);
+        int input=0;
+        do{
+            System.out.println("Press -1 If you want to exist from the program." );
+            System.out.print("Type the number that you want to see...: ");
+            input = sc.nextInt();
+            switch(input) {
+                case 1:
+                    myLinkedList.display();
+                case 2:
+
+
+                case 3:
+
+
+                case 4:
+
+
+                case 5:
+
+
+                case 6:
+
+
+                case 7:
+
+
+                case 8:
+
+
+                case 9:
+
+                  
+            }
+
+        }while(input!=-1);
+        System.out.println("You have existed from the program.");
     }
 }
