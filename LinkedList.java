@@ -12,7 +12,6 @@ public class LinkedList<T extends Comparable>{
         this.head = head;
     }
 
-    //
     public void addNode(T value)
     {
         Node<T> newNode = new Node<T>(value);
@@ -59,8 +58,7 @@ public class LinkedList<T extends Comparable>{
         }
 
     }
-
-    //Shows the student number
+    
     public int count(){
         int count=0;
         Node<T> iterator=head;
