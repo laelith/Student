@@ -3,7 +3,7 @@ package homework;
 import java.io.File;
 import java.util.Scanner;
 
-public class Student <T extends Comparable> {
+public class Student implements Comparable {
     private int id;
     private String name;
     private int mathGrade;
@@ -16,20 +16,7 @@ public class Student <T extends Comparable> {
 //        return overallAverage;
 //    }
 
-    public void createAStudent() throws Exception {
-        File file = new File("D:\\Repository\\Java\\src\\homework\\students.txt");
-        Scanner scanner = new Scanner(file);
-        while (scanner.hasNextLine()){
-            int id = scanner.nextInt();
-            String name = scanner.next();
-            int mathGrade = scanner.nextInt();
-            int dataStructureGrade = scanner.nextInt();
-            Student student = new Student(id,name,mathGrade,dataStructureGrade);
 
-            studentNumber+=studentNumber;
-        }
-
-    }
     public int getId() {
         return id;
     }
@@ -68,4 +55,10 @@ public class Student <T extends Comparable> {
         this.mathGrade = mathGrade;
         this.dataStructureGrade = dataStructureGrade;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
 }
